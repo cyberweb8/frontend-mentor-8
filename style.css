@@ -80,7 +80,7 @@ body {
   height: 35px;
 }
 
-.wrapper {
+.intro__wrapper {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -98,15 +98,18 @@ h1 {
 }
 
 .intro__btn {
-  display: inline-block;
   background-color: var(--clr-light);
-  color: var(--clr-magenta);
   padding: 0.5rem;
   border-radius: 5rem;
   width: 80%;
   margin: 0 auto;
 
   margin-bottom: 2rem;
+}
+
+.intro__btn a {
+  color: var(--clr-magenta);
+  text-decoration: none;
 }
 
 .footer__list {
@@ -135,4 +138,29 @@ ion-icon {
 
   color: var(--clr-light);
   background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  body {
+    gap: 12rem;
+    background: url('/images/bg-desktop.svg') no-repeat var(--clr-violet);
+    background-size: cover;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .intro__wrapper {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .intro__photo,
+  .intro__content {
+    flex-basis: 50%;
+  }
+
+  .intro__content {
+    text-align: left;
+  }
 }
